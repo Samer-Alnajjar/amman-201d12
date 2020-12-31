@@ -115,17 +115,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-    var multiply = 1;
+    var totalMul = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
 
-    for(let i = 0; i < multArr.length; i++) {
-        multiply = multiply * multArr[i];
-    }
-
-    "The numbers 2,3,4 have a product of 24."
-
-    var secElement = "The numbers " + testArray[0] + "," + testArray[1] + "," + testArray[2] + " have a product of " + multiply + "."
+    var secElement = "The numbers " + testArray[0] + "," + testArray[1] + "," + testArray[2] + " have a product of " + totalMul + "."
     
-    var newArray = [multiply, secElement];
+    var newArray = [totalMul, secElement];
     return newArray;
 }
 
