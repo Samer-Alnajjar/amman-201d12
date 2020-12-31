@@ -90,20 +90,10 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) { //eslint-disable-line
-    var sum = 0;
-    // var secElement = testArray[0];
-    for(let i = 0; i < testArray.length; i++) {
-        sum = sum + testArray[i];
-        // secElement = secElement + "," + testArray[i+1] + "," ;
-        // if(i === testArray.length - 1) {
-
-        // }
-    }
+    var totalSum = sum(sum(testArray[0], testArray[1])[0], testArray[2])[0];
+    var secElement = testArray[0] + "," + testArray[1] +"," + testArray[2] + " was passed in as an array of numbers, and "+ totalSum +" is their sum."
     
-    
-    var secElement = testArray[0] + "," + testArray[1] +"," + testArray[2] + " was passed in as an array of numbers, and "+ sum +" is their sum."
-    
-    var newArray = [sum, secElement];
+    var newArray = [totalSum, secElement];
     return newArray;
 }
 
